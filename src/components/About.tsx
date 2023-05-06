@@ -22,10 +22,8 @@ const About = () => {
 
           <div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              eaque ut dicta odit, laudantium, ipsa corporis rem suscipit natus
-              voluptatum repudiandae illo quod culpa corrupti nemo fugit
-              sapiente! Et, dolorem.
+              “Hard times create strong men. Strong men create good times. Good
+              times create weak men. And, weak men create hard times.”
             </p>
           </div>
         </div>
