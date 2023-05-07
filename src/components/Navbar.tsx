@@ -25,7 +25,7 @@ const Navbar = () => {
           <li>Contact</li>
         </ul>
 
-        {/* {hamburger} */}
+        {/* {hamburger menu} */}
         <div onClick={openNav} className=" md:hidden z-10">
           {!nav ? <FaBars /> : <FaTimes />}
         </div>
