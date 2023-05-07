@@ -6,7 +6,7 @@ export const data = [
     id: 1,
     name: 'React JS Application',
     image: WorkIm,
-    github: '',
+    github: 'gh repo clone hamzatalha77/firebase-reactjs-typescript',
     live: '',
   },
   {
