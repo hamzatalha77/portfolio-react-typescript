@@ -1,6 +1,7 @@
 import React from 'react'
 import WorkinImg from '../assets/workImg.jpeg'
 import realEstate from '../assets/realestate.jpg'
+
 const Work = () => {
   return (
     <div
