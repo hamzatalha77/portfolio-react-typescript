@@ -5,6 +5,10 @@ import { DataItem } from '../interface/dataItem'
 
 const Work = () => {
   const [fetchData, setFetchData] = useState<DataItem[]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {}
+  })
   return (
     <div
       data-name="work"
