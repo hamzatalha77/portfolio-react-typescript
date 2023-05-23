@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, onValue } from 'firebase/database'
+import { getDatabase, ref, onValue, DataSnapshot } from 'firebase/database'
 
 import WorkinImg from '../assets/workImg.jpeg'
 
@@ -21,11 +21,10 @@ const Work: React.FC = () => {
   const [data, setData] = useState<any[]>([])
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       const portfoliosRef = ref(database, 'portfolios')
 
-      try {
-        const snapshot = await onValue(portfoliosRef)
+      const unsubscribe = onValue(portfoliosRef, (snapshot: DataSnapshot) => {
         const dataVal = snapshot.val()
         if (dataVal) {
           const dataArray = Object.entries(dataVal).map(([key, value]) => ({
@@ -34,8 +33,11 @@ const Work: React.FC = () => {
           }))
           setData(dataArray)
         }
-      } catch (error) {
-        console.log('Error fetching data:', error)
+      })
+
+      return () => {
+        // Unsubscribe from the database reference when the component unmounts
+        unsubscribe()
       }
     }
 
