@@ -1,7 +1,9 @@
 import React from 'react'
 import WorkinImg from '../assets/workImg.jpeg'
+import { useEffect } from 'react'
 
 const Work = () => {
+  const db
   return (
     <div
       data-name="work"
