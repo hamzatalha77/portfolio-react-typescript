@@ -17,7 +17,7 @@ const Work: React.FC = () => {
         if (dataVal) {
           const dataArray = Object.entries(dataVal).map(([key, value]) => ({
             id: key,
-            ...value,
+            ...(value as object),
           }))
           setData(dataArray)
         }
