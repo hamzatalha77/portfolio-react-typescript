@@ -1,19 +1,31 @@
-import React from 'react'
-import WorkinImg from '../assets/workImg.jpeg'
-import { Database } from 'firebase/database'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { initializeApp } from 'firebase/app'
+import { getDatabase, ref, onValue } from 'firebase/database'
 
-import firebase from 'firebase/app'
+import WorkinImg from '../assets/workImg.jpeg'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyBrr86OuE6dPID1YZS1klQCLQ8bWtaON_I',
+  authDomain: 'something-5e33c.firebaseapp.com',
+  projectId: 'something-5e33c',
+  storageBucket: 'something-5e33c.appspot.com',
+  messagingSenderId: '886615306959',
+  appId: '1:886615306959:web:716429962ce8af37f6fdba',
+}
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+
 const Work: React.FC = () => {
   const [data, setData] = useState<any[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const database = firebase.database()
-      const ref = database.ref('portfolios') // Replace "yourDataPath" with the actual path to your data
+      const portfoliosRef = ref(database, 'portfolios')
 
       try {
-        const snapshot = await ref.once('value')
+        const snapshot = await onValue(portfoliosRef)
         const dataVal = snapshot.val()
         if (dataVal) {
           const dataArray = Object.entries(dataVal).map(([key, value]) => ({
