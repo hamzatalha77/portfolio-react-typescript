@@ -1,9 +1,10 @@
 import React from 'react'
 import WorkinImg from '../assets/workImg.jpeg'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { DataItem } from '../interface/dataItem'
 
 const Work = () => {
-  const db
+  const [fetchData, setFetchData] = useState<DataItem[]>([])
   return (
     <div
       data-name="work"
