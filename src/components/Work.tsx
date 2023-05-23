@@ -2,7 +2,7 @@ import React from 'react'
 import WorkinImg from '../assets/workImg.jpeg'
 import { useEffect, useState } from 'react'
 import { DataItem } from '../interface/dataItem'
-import { getFirestore } from 'firebase/firestore'
+import { DocumentData, QuerySnapshot, collection, getDoc, getFirestore, query } from 'firebase/firestore'
 
 const Work = () => {
   const [fetchData, setFetchData] = useState<DataItem[]>([])
@@ -11,7 +11,23 @@ const Work = () => {
     const fetchData = async () => {
       try {
         const db = getFirestore()
-      } catch (error) {}
+        const collectionRef = collection(db,'portfolios')
+        const q = query(collectionRef)
+        const querySnapshot : QuerySnapshot<DocumentData> = await getDoc(q)
+        const dataItems:DataItem[]=[]
+        const fetchImageUrls: string[]=[]
+        querySnapshot.docChanges.forEach((doc:QuerySnapshot<DocumentData>)=>{
+          const dataItem:DataItem={
+              id:doc.id,
+              name:doc.data().name
+              github:doc.data().github
+              live:doc.data().live
+              imageurl:doc.data().name
+          }
+        })
+      } catch (error) {
+
+      }
     }
   })
   return (
