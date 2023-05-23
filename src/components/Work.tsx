@@ -27,7 +27,7 @@ const Work: React.FC = () => {
         if (dataVal) {
           const dataArray = Object.entries(dataVal).map(([key, value]) => ({
             id: key,
-            ...value, // Spread the properties of each item directly
+            ...value,
           }))
           setData(dataArray)
         }
@@ -41,7 +41,6 @@ const Work: React.FC = () => {
 
     fetchData()
   }, [])
-
   return (
     <div
       data-name="work"
