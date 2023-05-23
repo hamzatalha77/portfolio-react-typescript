@@ -23,14 +23,12 @@ const Work: React.FC = () => {
       const portfoliosRef = ref(database, 'portfolios')
 
       const unsubscribe = onValue(portfoliosRef, (snapshot: DataSnapshot) => {
-        console.log('Snapshot:', snapshot.val()) // Log the snapshot object to see its contents
         const dataVal = snapshot.val()
         if (dataVal) {
           const dataArray = Object.entries(dataVal).map(([key, value]) => ({
             id: key,
-            ...(value as object),
+            ...value, // Spread the properties of each item directly
           }))
-          console.log('Data Array:', dataArray) // Log the transformed data array
           setData(dataArray)
         }
       })
@@ -62,7 +60,7 @@ const Work: React.FC = () => {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div
-              style={{ backgroundImage: `url(${item.image})` }}
+              style={{ backgroundImage: `url(${item.imageUrl})` }}
               className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
             >
               <div className="opacity-0 group-hover:opacity-100">
