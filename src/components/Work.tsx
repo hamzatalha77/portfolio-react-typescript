@@ -25,10 +25,13 @@ const Work: React.FC = () => {
       const unsubscribe = onValue(portfoliosRef, (snapshot: DataSnapshot) => {
         const dataVal = snapshot.val()
         if (dataVal) {
-          const dataArray = Object.entries(dataVal).map(([key, value]) => ({
-            id: key,
-            ...value,
-          }))
+          const dataArray = Object.entries(dataVal).map(([key, value]) => {
+            const item = {
+              id: key,
+              ...(value as object),
+            }
+            return item
+          })
           setData(dataArray)
         }
       })
