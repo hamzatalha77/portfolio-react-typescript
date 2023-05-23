@@ -2,12 +2,17 @@ import React from 'react'
 import WorkinImg from '../assets/workImg.jpeg'
 import { useEffect, useState } from 'react'
 import { DataItem } from '../interface/dataItem'
+import { getFirestore } from 'firebase/firestore'
 
 const Work = () => {
   const [fetchData, setFetchData] = useState<DataItem[]>([])
 
   useEffect(() => {
-    const fetchData = async () => {}
+    const fetchData = async () => {
+      try {
+        const db = getFirestore()
+      } catch (error) {}
+    }
   })
   return (
     <div
