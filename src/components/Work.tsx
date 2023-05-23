@@ -23,12 +23,14 @@ const Work: React.FC = () => {
       const portfoliosRef = ref(database, 'portfolios')
 
       const unsubscribe = onValue(portfoliosRef, (snapshot: DataSnapshot) => {
+        console.log('Snapshot:', snapshot.val()) // Log the snapshot object to see its contents
         const dataVal = snapshot.val()
         if (dataVal) {
           const dataArray = Object.entries(dataVal).map(([key, value]) => ({
             id: key,
             ...(value as object),
           }))
+          console.log('Data Array:', dataArray) // Log the transformed data array
           setData(dataArray)
         }
       })
