@@ -2,7 +2,7 @@ import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 const Home = () => {
   return (
-    <div data-name="home" className="w-full h-screen bg-[#0a192f]">
+    <div id="home" className="w-full h-screen bg-[#0a192f]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-600">Hi, My Name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
