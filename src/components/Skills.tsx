@@ -1,4 +1,3 @@
-import React from 'react'
 import Html from '../assets/html.png'
 import Css from '../assets/css.png'
 import Nodejs from '../assets/node.png'
