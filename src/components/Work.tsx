@@ -1,4 +1,6 @@
+import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
+import { firestore } from '../config/firebase'
 
 const Work = () => {
   const [data, setData] = useState<any[]>([])
