@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, onValue, DataSnapshot } from 'firebase/database'
+import { getDatabase, ref, get, onValue, DataSnapshot } from 'firebase/database'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBrr86OuE6dPID1YZS1klQCLQ8bWtaON_I',
@@ -20,27 +20,23 @@ const Work = () => {
   const [data, setData] = useState<any[]>([])
 
   useEffect(() => {
-    const fetchData = () => {
+    const fetchData = async () => {
       const portfoliosRef = ref(database, 'portfolios')
 
-      const unsubscribe = onValue(portfoliosRef, (snapshot: DataSnapshot) => {
-        const dataVal = snapshot.val()
-        if (dataVal) {
-          const dataArray = Object.entries(dataVal).map(([key, value]) => {
-            const item = {
-              id: key,
-              ...(value as object),
-            }
-            return item
-          })
+      try {
+        const snapshot = await get(portfoliosRef)
+        if (snapshot.exists()) {
+          const dataVal = snapshot.val()
+          const dataArray = Object.entries(dataVal).map(([key, value]) => ({
+            id: key,
+            ...(value as object),
+          }))
           setData(dataArray)
-          console.log(dataArray)
+        } else {
+          console.log('No data available')
         }
-      })
-
-      return () => {
-        // Unsubscribe from the database reference when the component unmounts
-        unsubscribe()
+      } catch (error) {
+        console.log('Error fetching data:', error)
       }
     }
 
