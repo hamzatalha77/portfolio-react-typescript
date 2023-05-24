@@ -16,7 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 
-const Work: React.FC = () => {
+const Work = () => {
   const [data, setData] = useState<any[]>([])
 
   useEffect(() => {
