@@ -47,6 +47,17 @@ const Work = () => {
   }, [])
   return (
     <>
+      <div>
+        {data.map((item) => (
+          <div key={item.id}>
+            {/* Render data from each item */}
+            <h3>{item.name}</h3>
+            <p>{item.github}</p>
+            <img src={item.imageUrl} alt={item.name} />
+            {/* Add any additional rendering as needed */}
+          </div>
+        ))}
+      </div>
       <div
         data-name="work"
         className="w-full h-screen text-gray-300 bg-[#0a192f]"
