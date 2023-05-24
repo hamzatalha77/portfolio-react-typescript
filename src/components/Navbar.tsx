@@ -54,23 +54,37 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : ' absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+              : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
           }
         >
           <li className="py-6 text-4xl">
-            <div onClick={openNav}>Home</div>
+            <Link onClick={openNav} to="home" smooth={true} duration={500}>
+              Home
+            </Link>
           </li>
           <li className="py-6 text-4xl">
-            <div onClick={openNav}>About</div>
+            {' '}
+            <Link onClick={openNav} to="about" smooth={true} duration={500}>
+              About
+            </Link>
           </li>
           <li className="py-6 text-4xl">
-            <div onClick={openNav}>Skills</div>
+            {' '}
+            <Link onClick={openNav} to="skills" smooth={true} duration={500}>
+              Skills
+            </Link>
           </li>
           <li className="py-6 text-4xl">
-            <div onClick={openNav}>Work</div>
+            {' '}
+            <Link onClick={openNav} to="work" smooth={true} duration={500}>
+              Work
+            </Link>
           </li>
           <li className="py-6 text-4xl">
-            <div onClick={openNav}>Contact</div>
+            {' '}
+            <Link onClick={openNav} to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
           </li>
         </ul>
         <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
