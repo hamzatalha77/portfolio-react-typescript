@@ -34,6 +34,7 @@ const Work = () => {
             return item
           })
           setData(dataArray)
+          console.log(dataArray)
         }
       })
 
