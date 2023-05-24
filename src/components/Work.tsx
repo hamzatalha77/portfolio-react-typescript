@@ -32,6 +32,7 @@ const Work = () => {
             ...(value as object),
           }))
           setData(dataArray)
+          console.log(dataArray)
         } else {
           console.log('No data available')
         }
@@ -50,7 +51,8 @@ const Work = () => {
             {/* Render data from each item */}
             <h3>{item.name}</h3>
             <p>{item.github}</p>
-            <img src={item.imageUrl} alt={item.name} />
+            <p>{item.live}</p>
+            {/* <img src={item.imageUrl} alt={item.name} /> */}
             {/* Add any additional rendering as needed */}
           </div>
         ))}
