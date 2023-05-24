@@ -1,11 +1,8 @@
-const path = require('path')
+import path from 'path'
+import nodeExternals from 'webpack-node-externals'
 
-module.exports = {
-  resolve: {
-    fallback: {
-      fs: false,
-      path: require.resolve('path-browserify'),
-      os: require.resolve('os-browserify/browser'),
-    },
-  },
+export default {
+  // ...
+  externalsPresets: { node: true }, // Exclude node_modules
+  externals: [nodeExternals()], // Exclude Node.js core modules
 }
