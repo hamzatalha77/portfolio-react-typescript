@@ -70,7 +70,7 @@ const Navbar = () => {
           </li>
           <li className="py-6 text-4xl">
             {' '}
-            <Link onClick={openNav} to="skills" smooth={true} duration={500}>
+            <Link onClick={openNav} to="skill" smooth={true} duration={500}>
               Skills
             </Link>
           </li>
