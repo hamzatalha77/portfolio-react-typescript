@@ -1,5 +1,9 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
+// Remove the following line
+// import dotenv from 'dotenv';
+
+// dotenv.config(); // Remove this line
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
