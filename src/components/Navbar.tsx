@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
@@ -6,15 +6,32 @@ import Logo from '../assets/logo1.png'
 import { Link } from 'react-scroll'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-
+  const [theme, setTheme] = useState('light')
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [theme])
   const openNav = () => {
     setNav((prev) => !prev)
   }
+  const handleThemeSwitch = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
     <>
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
         <div>
           <img src={Logo} alt="logoimage" style={{ width: '50px' }} />
+          <button
+            className="bg-slate-400 rounded-3xl"
+            onClick={handleThemeSwitch}
+          >
+            dark mode
+          </button>
         </div>
         {/* {first menu} */}
 
