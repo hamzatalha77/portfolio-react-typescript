@@ -1,4 +1,5 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Link } from 'react-scroll'
 const Home = () => {
   return (
     <div id="home" className="w-full h-screen bg-[#121212] dark:bg-[#eaeaea]">
@@ -17,8 +18,10 @@ const Home = () => {
           deployit as soon as possible on github stay stunned!
         </p>
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 dark:hover:bg-lime-400 dark:hover:border-lime-400">
-            View Work
+          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center dark:border-cyan-400 dark:bg-cyan-400 hover:bg-pink-600 hover:border-pink-600 dark:hover:bg-transparent dark:hover:border-lime-400">
+            <Link to="work" smooth={true} duration={500}>
+              View Work
+            </Link>
             <span className="group-hover:rotate-90 duration-300">
               <HiArrowNarrowRight className="ml-3" />
             </span>
