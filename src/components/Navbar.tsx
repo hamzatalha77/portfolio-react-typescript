@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import Logo from '../assets/logoht.jpg'
+import Logo11 from '../assets/logo11.png'
+import Logo12 from '../assets/logo12.png'
 import { Link } from 'react-scroll'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -25,7 +26,11 @@ const Navbar = () => {
     <>
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fa5923] dark:bg-[#1d2c49] text-gray-300">
         <div>
-          <img src={Logo} alt="logoimage" style={{ width: '70px' }} />
+          {theme === 'dark' ? (
+            <img src={Logo11} alt="logoimage" style={{ width: '100px' }} />
+          ) : (
+            <img src={Logo12} alt="logoimage" style={{ width: '100px' }} />
+          )}
           <button
             className="bg-slate-400 rounded-3xl"
             onClick={handleThemeSwitch}
