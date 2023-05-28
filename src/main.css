@@ -7,7 +7,8 @@
 
 @layer base {
   body {
-    @apply font-[Bebas Neue];
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
   }
   li {
     @apply px-4;
