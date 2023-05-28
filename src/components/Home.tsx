@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div id="home" className="w-full h-screen bg-[#fa5923] dark:bg-[#1d2c49]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-pink-600 dark:text-lime-400">Hi, My Name is</p>
+        <p className="text-[#1d2c49] dark:text-[#fa5923]">Hi, My Name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Hamza Talha
         </h1>
@@ -18,7 +18,7 @@ const Home = () => {
           deployit as soon as possible on github stay stunned!
         </p>
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center dark:border-cyan-400 dark:bg-cyan-400 hover:bg-pink-600 hover:border-pink-600 dark:hover:bg-transparent dark:hover:border-lime-400">
+          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center dark:border-[#fa5923] dark:bg-[#fa5923] hover:bg-[#1d2c49] hover:border-[#1d2c49] dark:hover:bg-transparent dark:hover:border-[#fa5923]">
             <Link to="work" smooth={true} duration={500}>
               View Work
             </Link>
