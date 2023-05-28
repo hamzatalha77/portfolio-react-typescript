@@ -2,7 +2,7 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 const Home = () => {
   return (
-    <div id="home" className="w-full h-screen bg-[#121212] dark:bg-[#eaeaea]">
+    <div id="home" className="w-full h-screen bg-[#fa5923] dark:bg-[#1d2c49]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-600 dark:text-lime-400">Hi, My Name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
@@ -14,7 +14,7 @@ const Home = () => {
         <p className="text-[#8892b0] py-4 max-w-[700px]">
           hello everybody i'm trying to build my first portfolio using
           (React/Typescript) i'll do my best in this project because i really
-          need to improve myself withing learning and creating websites. i'll
+          need to improve myself within learning and creating websites. i'll
           deployit as soon as possible on github stay stunned!
         </p>
         <div>

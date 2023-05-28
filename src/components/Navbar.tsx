@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import Logo from '../assets/logo1.png'
+import Logo from '../assets/logoht.jpg'
 import { Link } from 'react-scroll'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -23,9 +23,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#121212] dark:bg-[#eaeaea] text-gray-300">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fa5923] dark:bg-[#1d2c49] text-gray-300">
         <div>
-          <img src={Logo} alt="logoimage" style={{ width: '50px' }} />
+          <img src={Logo} alt="logoimage" style={{ width: '70px' }} />
           <button
             className="bg-slate-400 rounded-3xl"
             onClick={handleThemeSwitch}
@@ -71,7 +71,7 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 left-0 w-full h-screen bg-[#121212] flex flex-col justify-center items-center'
+              : 'absolute top-0 left-0 w-full h-screen bg-[#fa5923] flex flex-col justify-center items-center'
           }
         >
           <li className="py-6 text-4xl">
