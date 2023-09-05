@@ -11,7 +11,7 @@ const Work = () => {
         const querySnapshot = await getDocs(collection(firestore, 'portfolios'))
         const dataArray = querySnapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data(),
+          ...doc.data()
         }))
         setData(dataArray)
       } catch (error) {
@@ -24,7 +24,7 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="w-full md:h-screen  dark:bg-[#1d2c49] text-gray-300 bg-[#fa5923]"
+      className="w-full md:h-screen  dark:bg-[#191a19] text-gray-300 bg-[#fa5923]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">

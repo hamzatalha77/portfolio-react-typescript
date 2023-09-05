@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fa5923] dark:bg-[#1d2c49] text-gray-300">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fa5923] dark:bg-[#191a19] text-gray-300">
         <div>
           {theme === 'dark' ? (
             <img src={Logo11} alt="logoimage" style={{ width: '100px' }} />
