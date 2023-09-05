@@ -6,10 +6,10 @@ const Contact = () => {
     >
       <form action="POST" className="flex flex-col max-w-[600px] w-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#fa5923]">
+          <p className="text-4xl font-bold inline border-b-4 text-[#444544] border-[#b22725]">
             Contact
           </p>
-          <p className="text-gray-300 py-4">
+          <p className="text-[#ccd6f6] py-4">
             / Submit the form below or shoot me an email -
             hamzatalha.web7@gmail.com
           </p>
@@ -31,7 +31,7 @@ const Contact = () => {
           className="bg-[#ccd6f6] p-2"
           rows={10}
         ></textarea>
-        <button className="text-white border-2 hover:bg-pink-600 hover:border-[#fa5923] px-4 py-3 my-8 mx-auto flex items-center">
+        <button className="text-white border-2 hover:bg-[#b22725] hover:border-[#b22725] px-4 py-3 my-8 mx-auto flex items-center">
           Let's collabe
         </button>
       </form>
