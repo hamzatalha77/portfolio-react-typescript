@@ -1,11 +1,11 @@
-import Html from '../assets/html.png'
-import Css from '../assets/css.png'
 import Nodejs from '../assets/node.png'
-import Javascript from '../assets/javascript.png'
 import Mongodb from '../assets/mongo.png'
 import Reactjs from '../assets/react.png'
 import Tailwind from '../assets/tailwind.png'
 import Firebase from '../assets/firebase.png'
+import Typescript from '../assets/typescript.png'
+import Nextjs from '../assets/nextjs.png'
+import Redux from '../assets/redux.png'
 
 const Skills = () => {
   return (
@@ -22,22 +22,22 @@ const Skills = () => {
             / These are the technologies I've worked with
           </p>
         </div>
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Html} alt="html" className="w-20 mx-auto" />
-            <p className="my-4">HTML</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Css} alt="css" className="w-20 mx-auto" />
-            <p className="my-4">CSS</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Javascript} alt="javascript" className="w-20 mx-auto" />
-            <p className="my-4">JAVASCRIPT</p>
-          </div>
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 text-[#8892b0]">
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img src={Reactjs} alt="reactjs" className="w-20 mx-auto" />
             <p className="my-4">REACT JS</p>
+          </div>
+          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
+            <img src={Redux} alt="redux" className="w-20 mx-auto" />
+            <p className="my-4">REDUX</p>
+          </div>
+          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
+            <img src={Typescript} alt="typescript" className="w-20 mx-auto" />
+            <p className="my-4">TYPESCRIPT</p>
+          </div>
+          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
+            <img src={Nextjs} alt="nextjs" className="w-20 mx-auto" />
+            <p className="my-4">Next JS</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img src={Mongodb} alt="mongodb" className="w-20 mx-auto" />

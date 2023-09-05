@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         {/* {first menu} */}
 
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex text-[#8892b0]">
           <li>
             <Link to="home" smooth={true} duration={500}>
               Home
@@ -76,7 +76,7 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 left-0 w-full h-screen bg-[#b22725] flex flex-col justify-center items-center'
+              : 'absolute top-0 left-0 w-full h-screen bg-[#b22725] flex flex-col justify-center items-center text-[#8892b0]'
           }
         >
           <li className="py-6 text-4xl">
