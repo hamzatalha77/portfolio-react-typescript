@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fa5923] dark:bg-[#191a19] text-gray-300">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#b22725] dark:bg-[#191a19] text-gray-300">
         <div>
           {theme === 'dark' ? (
             <img src={Logo11} alt="logoimage" style={{ width: '100px' }} />
@@ -76,7 +76,7 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 left-0 w-full h-screen bg-[#fa5923] flex flex-col justify-center items-center'
+              : 'absolute top-0 left-0 w-full h-screen bg-[#b22725] flex flex-col justify-center items-center'
           }
         >
           <li className="py-6 text-4xl">
