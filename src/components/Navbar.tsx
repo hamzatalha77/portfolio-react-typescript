@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#b22725] dark:bg-[#191a19] text-[#444544]">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#edf0ed] dark:bg-[#191a19] text-[#444544]">
         <div>
           {theme === 'dark' ? (
             <img src={Logo11} alt="logoimage" style={{ width: '100px' }} />
@@ -109,7 +109,7 @@ const Navbar = () => {
           <ul>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
               <a
-                className="flex justify-between items-center w-full text-[#444544]"
+                className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="/"
               >
                 Linkedin <FaLinkedin size={30} />
@@ -117,7 +117,7 @@ const Navbar = () => {
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
               <a
-                className="flex justify-between items-center w-full text-[#444544]"
+                className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="/"
               >
                 Github <FaGithub size={30} />
@@ -125,7 +125,7 @@ const Navbar = () => {
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#42b883]">
               <a
-                className="flex justify-between items-center w-full text-[#444544]"
+                className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="/"
               >
                 Email <HiOutlineMail size={30} />
@@ -133,7 +133,7 @@ const Navbar = () => {
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
               <a
-                className="flex justify-between items-center w-full text-[#444544]"
+                className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="/"
               >
                 Resume <BsFillPersonLinesFill size={30} />
