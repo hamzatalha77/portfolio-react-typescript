@@ -11,11 +11,11 @@ const Skills = () => {
   return (
     <div
       id="skill"
-      className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#444544]"
+      className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#444544] dark:text-[#b22725]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
-          <p className="text-4xl font-bold inline border-b-4 border-[#b22725]">
+          <p className="text-4xl font-bold inline border-b-4 border-[#444544] dark:border-[#b22725]">
             Skills
           </p>
           <p className="py-4 text-[#000000] dark:text-[#f2f2f2]">

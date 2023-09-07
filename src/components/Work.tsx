@@ -24,11 +24,11 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="w-full md:h-screen  dark:bg-[#191a19] text-[#444544] bg-[#fffdf9]"
+      className="w-full md:h-screen  dark:bg-[#191a19] text-[#444544] dark:text-[#b22725] bg-[#fffdf9]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-[#444544] border-[#b22725]">
+          <p className="text-4xl font-bold inline border-b-4 border-[#444544] dark:border-[#b22725]">
             Work
           </p>
           <p className="py-6 text-[#000000] dark:text-[#f2f2f2]">
