@@ -49,7 +49,7 @@ const Navbar = () => {
             ></label>
           </div>
         </div>
-        <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6]">
+        <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6] ">
           <li>
             <Link to="home" smooth={true} duration={500}>
               Home
