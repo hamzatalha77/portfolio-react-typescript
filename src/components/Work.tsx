@@ -1,6 +1,7 @@
 import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { firestore } from '../config/firebase'
+import { FaGithub } from 'react-icons/fa'
 
 const Work = () => {
   const [data, setData] = useState<any[]>([])
@@ -40,7 +41,7 @@ const Work = () => {
             <div
               key={item.id}
               style={{ backgroundImage: `url(${item.imageUrl})` }}
-              className="shadow-lg shadow-[#040c16] group container rounded-md 
+              className="shadow-lg shadow-[#000000] group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div "
             >
               <div className="opacity-0 group-hover:opacity-100 ">
@@ -48,16 +49,13 @@ const Work = () => {
                   {item.name}
                 </span>
                 <div className="pt-8 text-center">
-                  <a href="/">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                      {item.github}
+                  <a href={item.github}>
+                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg flex">
+                      <FaGithub size={25} className="mr-2" />
+                      GitHub
                     </button>
                   </a>
-                  <a href="/">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                      {item.live}
-                    </button>
-                  </a>
+                  <p className="text-left text-sm text-white">{item.live}</p>
                 </div>
               </div>
             </div>
