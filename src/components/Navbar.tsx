@@ -5,6 +5,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 import Logo11 from '../assets/logo11.png'
 import Logo12 from '../assets/logo12.png'
 import { Link } from 'react-scroll'
+
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [theme, setTheme] = useState('dark')
@@ -31,15 +32,23 @@ const Navbar = () => {
           ) : (
             <img src={Logo12} alt="logoimage" style={{ width: '100px' }} />
           )}
-          <button
-            className="bg-slate-400 rounded-3xl"
-            onClick={handleThemeSwitch}
-          >
-            dark mode
-          </button>
         </div>
         {/* {first menu} */}
-
+        <div className="h-screen flex items-center justify-center">
+          <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+            <input
+              type="checkbox"
+              name="toggle"
+              id="toggle"
+              onClick={handleThemeSwitch}
+              className="bg-yellow-300 border-yellow-500 mr-1 focus:ring-transparent toggle-checkbox absolute block w-6 h-6 rounded-full border-2 appearance-none cursor-pointer"
+            />
+            <label
+              htmlFor="toggle"
+              className="toggle-label block h-8 -ml-1 -mt-1 rounded-full bg-green-400 cursor-pointer"
+            ></label>
+          </div>
+        </div>
         <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6]">
           <li>
             <Link to="home" smooth={true} duration={500}>
