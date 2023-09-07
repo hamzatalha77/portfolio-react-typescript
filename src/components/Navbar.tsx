@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#edf0ed] dark:bg-[#191a19] text-[#444544]">
+      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fffdf9] dark:bg-[#191a19] text-[#444544]">
         <div>
           {theme === 'dark' ? (
             <img src={Logo11} alt="logoimage" style={{ width: '100px' }} />
@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         {/* {first menu} */}
 
-        <ul className="hidden md:flex text-[#8892b0]">
+        <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6]">
           <li>
             <Link to="home" smooth={true} duration={500}>
               Home

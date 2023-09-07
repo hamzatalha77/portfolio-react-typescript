@@ -2,9 +2,9 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 const Home = () => {
   return (
-    <div id="home" className="w-full h-screen bg-[#edf0ed] dark:bg-[#191a19]">
+    <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-[#191a19] dark:text-[#b22725]">Hi, My Name is</p>
+        <p className="text-[#b22725]">Hi, My Name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Hamza Talha
         </h1>
@@ -18,7 +18,7 @@ const Home = () => {
           deployit as soon as possible on github stay stunned!
         </p>
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center dark:border-[#b22725] dark:bg-[#b22725] hover:bg-[#191a19] hover:border-[#191a19] dark:hover:bg-transparent dark:hover:border-[#b22725]">
+          <button className="text-[#b22725] dark:text-[#ffffff] group border-2 px-6 py-3 my-2 flex items-center dark:border-[#b22725] dark:bg-[#b22725] hover:bg-[#191a19] hover:border-[#191a19] dark:hover:bg-transparent border-[#b22725] dark:hover:border-[#b22725]">
             <Link to="work" smooth={true} duration={500}>
               View Work
             </Link>

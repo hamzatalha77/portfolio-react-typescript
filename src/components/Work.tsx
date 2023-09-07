@@ -24,7 +24,7 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="w-full md:h-screen  dark:bg-[#191a19] text-[#444544] bg-[#edf0ed]"
+      className="w-full md:h-screen  dark:bg-[#191a19] text-[#444544] bg-[#fffdf9]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">

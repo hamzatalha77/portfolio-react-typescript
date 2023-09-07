@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full h-screen bg-[#edf0ed]  dark:bg-[#191a19] text-[#444544]"
+      className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#444544]"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
