@@ -31,7 +31,7 @@ const Work = () => {
           <p className="text-4xl font-bold inline border-b-4 text-[#444544] border-[#b22725]">
             Work
           </p>
-          <p className="py-6 text-[#f2f2f2]">
+          <p className="py-6 text-[#000000] dark:text-[#f2f2f2]">
             /Check out some of my recent work
           </p>
         </div>

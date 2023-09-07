@@ -18,7 +18,7 @@ const About = () => {
             <p>Hi. i'm Hamza, nice to see you here please take a sit. </p>
           </div>
           <div>
-            <p className="text-[#f2f2f2]">
+            <p className="text-[#000000] dark:text-[#f2f2f2]">
               “Hard times create strong men. Strong men create good times. Good
               times create weak men. And, weak men create hard times.”
             </p>

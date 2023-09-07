@@ -9,7 +9,7 @@ const Contact = () => {
           <p className="text-4xl font-bold inline border-b-4 text-[#444544] border-[#b22725]">
             Contact
           </p>
-          <p className="text-[#f2f2f2] py-4">
+          <p className="text-[#000000] dark:text-[#f2f2f2] py-4">
             / Submit the form below or shoot me an email -
             hamzatalha.web7@gmail.com
           </p>

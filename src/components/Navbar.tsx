@@ -7,7 +7,7 @@ import Logo12 from '../assets/logo12.png'
 import { Link } from 'react-scroll'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')

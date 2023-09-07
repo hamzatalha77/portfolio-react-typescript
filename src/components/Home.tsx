@@ -11,7 +11,7 @@ const Home = () => {
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
           i'm a Frontend React Developer.
         </h2>
-        <p className="text-[#f2f2f2] py-4 max-w-[700px]">
+        <p className="text-[#000000] dark:text-[#f2f2f2] py-4 max-w-[700px]">
           hello everybody i'm trying to build my first portfolio using
           (React/Typescript) i'll do my best in this project because i really
           need to improve myself within learning and creating websites. i'll
