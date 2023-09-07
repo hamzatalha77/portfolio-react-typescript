@@ -15,7 +15,7 @@ const Home = () => {
           hello everybody i'm trying to build my first portfolio using
           (React/Typescript) i'll do my best in this project because i really
           need to improve myself within learning and creating websites. i'll
-          deployit as soon as possible on github stay stunned!
+          deploy it as soon as possible on github stay stunned!
         </p>
         <div>
           <button className="text-[#b22725] dark:text-[#ffffff] group border-2 px-6 py-3 my-2 flex items-center dark:border-[#b22725] dark:bg-[#b22725] hover:bg-[#191a19] hover:border-[#191a19] dark:hover:bg-transparent border-[#b22725] dark:hover:border-[#b22725]">
