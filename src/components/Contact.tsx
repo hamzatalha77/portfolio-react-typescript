@@ -31,7 +31,7 @@ const Contact = () => {
           className="bg-[#ccd6f6] p-2"
           rows={10}
         ></textarea>
-        <button className="text-white border-2 hover:bg-[#b22725] hover:border-[#b22725] px-4 py-3 my-8 mx-auto flex items-center">
+        <button className="text-[#b22725] dark:text-[#ffffff]  dark:border-[#b22725] dark:bg-[#b22725] hover:bg-[#191a19] hover:border-[#191a19] dark:hover:bg-transparent border-[#b22725] dark:hover:border-[#b22725] border-2  px-4 py-3 my-8 mx-auto flex items-center">
           Let's collabe
         </button>
       </form>
