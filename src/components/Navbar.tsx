@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import Logo11 from '../assets/logo11.png'
-import Logo12 from '../assets/logo12.png'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
@@ -26,14 +24,6 @@ const Navbar = () => {
   return (
     <>
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fffdf9] dark:bg-[#191a19] text-[#444544]">
-        <div>
-          {theme === 'dark' ? (
-            <img src={Logo11} alt="logoimage" style={{ width: '100px' }} />
-          ) : (
-            <img src={Logo12} alt="logoimage" style={{ width: '100px' }} />
-          )}
-        </div>
-        {/* {first menu} */}
         <div className="h-screen flex items-center justify-center">
           <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
             <input
