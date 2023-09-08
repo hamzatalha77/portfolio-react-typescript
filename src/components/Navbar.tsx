@@ -27,6 +27,7 @@ const Navbar = () => {
         <div className="h-screen flex items-center justify-center">
           <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
             <input
+              checked={theme === 'dark'}
               type="checkbox"
               name="toggle"
               id="toggle"
