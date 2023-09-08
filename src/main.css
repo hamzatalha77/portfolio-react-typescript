@@ -21,13 +21,16 @@
   background-position: center;
   height: 250px;
 }
-.content-div:hover {
-  background-image: radial-gradient(
-    circle,
-    rgba(200, 78, 76, 1) 0%,
-    rgba(178, 39, 37, 1) 100%,
-    rgba(223, 20, 17, 1) 100%
-  ) !important;
+.content-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Adjust the transition duration as needed */
+}
+
+.scroll-on-hover:hover .content-container {
+  max-height: 100%;
+  overflow: auto;
+  transition: max-height 0.3s ease;
 }
 
 .toggle-checkbox:checked {
