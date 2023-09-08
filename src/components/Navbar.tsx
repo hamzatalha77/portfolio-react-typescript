@@ -80,6 +80,22 @@ const Navbar = () => {
           }
         >
           <li className="py-6 text-4xl">
+            <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+              <input
+                checked={theme === 'dark'}
+                type="checkbox"
+                name="toggle"
+                id="toggle"
+                onClick={handleThemeSwitch}
+                className="bg-yellow-300 border-yellow-500 mr-1 focus:ring-transparent toggle-checkbox absolute block w-6 h-6 rounded-full border-2 appearance-none cursor-pointer"
+              />
+              <label
+                htmlFor="toggle"
+                className="toggle-label block h-8 -ml-1 -mt-1 rounded-full bg-green-400 cursor-pointer"
+              ></label>
+            </div>
+          </li>
+          <li className="py-6 text-4xl">
             <Link onClick={openNav} to="home" smooth={true} duration={500}>
               Home
             </Link>
