@@ -1,10 +1,20 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import { gsap } from 'gsap'
+import { useRef, useEffect } from 'react'
+
 const Home = () => {
+  const textRef = useRef(null)
+  useEffect(() => {
+    const el = textRef.current
+    gsap.fromTo(el, { rotate: 0 }, { rotate: 180, duration: 3 })
+  }, [])
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-[#b22725] text-2xl">Hi 👋, My Name is</p>
+        <p className="text-[#b22725] text-2xl" ref={textRef}>
+          Hi 👋, My Name is
+        </p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Hamza Talha
         </h1>

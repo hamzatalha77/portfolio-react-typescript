@@ -41,34 +41,33 @@ const Navbar = () => {
           </div>
         </div>
         <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6] ">
-          <li>
+          <li className="hover:text-[#b22725]">
             <Link to="home" smooth={true} duration={500}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="hover:text-[#b22725]">
             <Link to="about" smooth={true} duration={500}>
               About
             </Link>
           </li>
-          <li>
+          <li className="hover:text-[#b22725]">
             <Link to="skill" smooth={true} duration={500}>
               Skill
             </Link>
           </li>
-          <li>
+          <li className="hover:text-[#b22725]">
             <Link to="work" smooth={true} duration={500}>
               Work
             </Link>
           </li>
-          <li>
+          <li className="hover:text-[#b22725]">
             <Link to="contact" smooth={true} duration={500}>
               Contact
             </Link>
           </li>
         </ul>
 
-        {/* {hamburger menu} */}
         <div onClick={openNav} className=" md:hidden z-10">
           {!nav ? <FaBars /> : <FaTimes />}
         </div>
