@@ -22,36 +22,20 @@
   height: 250px;
 }
 .screen {
-  display: block;
   width: 300px;
-  height: 350px;
+  height: 300px;
   overflow: hidden;
-  position: relative;
-  border: 2px solid #b3b3b3;
-  border-radius: 1px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 .screen img {
-  bottom: -1210px;
   width: 100%;
-  height: auto;
-  position: absolute;
-  z-index: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: top 11s;
-  -moz-transition: top 11s;
-  -ms-transition: top 11s;
-  -o-transition: top 11s;
-  transition: bottom 11s;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: all 1s ease-in-out;
 }
 .screen:hover img {
-  bottom: 0;
-  -webkit-transition: all 11s;
-  -moz-transition: all 11s;
-  -ms-transition: all 11s;
-  -o-transition: all 11s;
-  transition: all 11s;
+  object-position: bottom center;
 }
 .toggle-checkbox:checked {
   right: 0;
