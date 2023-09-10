@@ -1,37 +1,13 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import { gsap } from 'gsap'
-const Navbar = ({ timeline, ease }) => {
-  let menu_item1 = useRef<HTMLLIElement | null>(null)
-  let menu_item2 = useRef<HTMLLIElement | null>(null)
-  let menu_item3 = useRef<HTMLLIElement | null>(null)
-  let menu_item4 = useRef<HTMLLIElement | null>(null)
-  let menu_item5 = useRef<HTMLLIElement | null>(null)
+
+const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [theme, setTheme] = useState('dark')
   useEffect(() => {
-    timeline.from(
-      [
-        menu_item1.current,
-        menu_item2.current,
-        menu_item3.current,
-        menu_item4.current,
-        menu_item5.current
-      ],
-      2,
-      {
-        opacity: 0,
-        y: -200,
-        stagger: {
-          amount: 0.4
-        },
-        ease: ease
-      }
-    )
-
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
@@ -65,27 +41,27 @@ const Navbar = ({ timeline, ease }) => {
           </div>
         </div>
         <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6] ">
-          <li ref={(el) => (menu_item1 = el)} className="hover:text-[#b22725]">
+          <li className="hover:text-[#b22725]">
             <Link to="home" smooth={true} duration={500}>
               Home
             </Link>
           </li>
-          <li ref={(el) => (menu_item2 = el)} className="hover:text-[#b22725]">
+          <li className="hover:text-[#b22725]">
             <Link to="about" smooth={true} duration={500}>
               About
             </Link>
           </li>
-          <li ref={(el) => (menu_item3 = el)} className="hover:text-[#b22725]">
+          <li className="hover:text-[#b22725]">
             <Link to="skill" smooth={true} duration={500}>
               Skill
             </Link>
           </li>
-          <li ref={(el) => (menu_item4 = el)} className="hover:text-[#b22725]">
+          <li className="hover:text-[#b22725]">
             <Link to="work" smooth={true} duration={500}>
               Work
             </Link>
           </li>
-          <li ref={(el) => (menu_item5 = el)} className="hover:text-[#b22725]">
+          <li className="hover:text-[#b22725]">
             <Link to="contact" smooth={true} duration={500}>
               Contact
             </Link>

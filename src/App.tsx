@@ -5,16 +5,10 @@ import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Work from './components/Work'
 import './main.css'
-import { gsap, Power3 } from 'gsap'
-
 function App() {
-  // Declare the type of tl explicitly
-  let tl: gsap.core.Timeline = gsap.timeline()
-  let ease = Power3.easeOut
-
   return (
     <div>
-      <Navbar timeline={tl} ease={ease} />
+      <Navbar />
       <Home />
       <About />
       <Skills />
