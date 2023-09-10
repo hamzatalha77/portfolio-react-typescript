@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Work from './components/Work'
 import './main.css'
+
 function App() {
   return (
     <div>

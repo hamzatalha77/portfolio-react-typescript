@@ -1,4 +1,24 @@
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const About = () => {
+  gsap.registerPlugin(ScrollTrigger)
+  let tl2 = gsap.timeline()
+  tl2.to('#scrollingText', {
+    x: 1000,
+    duration: 50,
+    repeat: -1,
+    ease: 'linear'
+  })
+  let tl = gsap.timeline()
+  tl.to('#scrollingText', {
+    xPercent: 15,
+    scrollTrigger: {
+      trigger: '#scrollingText',
+      scrub: 1
+    }
+  })
+
   return (
     <div
       id="about"
@@ -18,7 +38,10 @@ const About = () => {
             <p>Hi. i'm Hamza, nice to see you here please take a sit. </p>
           </div>
           <div>
-            <p className="text-[#000000] dark:text-[#f2f2f2]">
+            <p
+              id="scrollingText"
+              className="text-[#000000] dark:text-[#f2f2f2]"
+            >
               “Hard times create strong men. Strong men create good times. Good
               times create weak men. And, weak men create hard times.”
             </p>
