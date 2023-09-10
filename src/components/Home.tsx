@@ -7,7 +7,14 @@ const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
     const el = textRef.current
-    gsap.fromTo(el, { rotate: 0 }, { rotate: 180, duration: 3 })
+    gsap.from(el, {
+      xPercent: -20,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 2,
+      scale: -1,
+      ease: 'back'
+    })
   }, [])
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
