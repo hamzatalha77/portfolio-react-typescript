@@ -7,7 +7,17 @@ const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
     const el = textRef.current
-    gsap.fromTo(el, { rotate: 0 }, { rotate: 180, duration: 3 })
+    const timeline = gsap.timeline()
+
+    timeline.from(el, {
+      y: 100,
+      ease: 'power4.out',
+      delay: 1,
+      skewY: 7,
+      stagger: {
+        amount: 0.3
+      }
+    })
   }, [])
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
