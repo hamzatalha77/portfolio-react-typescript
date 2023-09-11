@@ -1,6 +1,6 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import { TimelineMax, TweenLite, gsap } from 'gsap'
+import { gsap } from 'gsap'
 import { useRef, useEffect } from 'react'
 
 const Home = () => {
