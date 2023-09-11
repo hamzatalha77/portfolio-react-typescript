@@ -1,27 +1,31 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import { gsap } from 'gsap'
 import { useRef, useEffect } from 'react'
+import { animate, stagger } from 'motion'
 
 const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
     const el = textRef.current
-    gsap.from(el, {
-      x: -100,
-      opacity: 0,
-      duration: 1,
-      ease: 'Power2.easeOut'
-    })
+    animate(
+      el,
+      { x: 200 },
+      {
+        delay: stagger(0.1),
+        duration: 0.5,
+        easing: [0.22, 0.03, 0.26, 1]
+      }
+    )
   }, [])
+
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+      <div
+        className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
+        ref={textRef}
+      >
         <p className="text-[#b22725] text-2xl">Hi 👋, My Name is</p>
-        <h1
-          className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]"
-          ref={textRef}
-        >
+        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Hamza Talha
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
