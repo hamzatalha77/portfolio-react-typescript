@@ -31,7 +31,7 @@ const Navbar = () => {
               type="checkbox"
               name="toggle"
               id="toggle"
-              onClick={handleThemeSwitch}
+              onChange={handleThemeSwitch}
               className="bg-yellow-300 border-yellow-500 mr-1 focus:ring-transparent toggle-checkbox absolute block w-6 h-6 rounded-full border-2 appearance-none cursor-pointer"
             />
             <label
@@ -85,7 +85,7 @@ const Navbar = () => {
                 type="checkbox"
                 name="toggle"
                 id="toggle"
-                onClick={handleThemeSwitch}
+                onChange={handleThemeSwitch}
                 className="bg-yellow-300 border-yellow-500 mr-1 focus:ring-transparent toggle-checkbox absolute block w-6 h-6 rounded-full border-2 appearance-none cursor-pointer"
               />
               <label
