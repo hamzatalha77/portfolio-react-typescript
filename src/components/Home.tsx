@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const el = textRef.current
     gsap.from(el, {
-      y: -50,
+      x: -50,
       opacity: 1,
       duration: 1,
       ease: 'Power2.easeOut'
