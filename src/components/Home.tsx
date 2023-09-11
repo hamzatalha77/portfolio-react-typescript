@@ -7,23 +7,21 @@ const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
     const el = textRef.current
-    if (el) {
-      const tl = gsap.timeline()
-      tl.from(el, {
-        y: -50,
-        opacity: 0,
-        duration: 1,
-        ease: 'Power2.easeOut'
-      })
-    }
+    gsap.from(el, {
+      y: -50,
+      opacity: 1,
+      duration: 1,
+      ease: 'Power2.easeOut'
+    })
   }, [])
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-[#b22725] text-2xl" ref={textRef}>
-          Hi 👋, My Name is
-        </p>
-        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
+        <p className="text-[#b22725] text-2xl">Hi 👋, My Name is</p>
+        <h1
+          className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]"
+          ref={textRef}
+        >
           Hamza Talha
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
