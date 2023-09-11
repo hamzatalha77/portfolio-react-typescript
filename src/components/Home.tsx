@@ -1,23 +1,15 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import { gsap } from 'gsap'
+import { TimelineMax, TweenLite, gsap } from 'gsap'
 import { useRef, useEffect } from 'react'
 
 const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
     const el = textRef.current
-    const timeline = gsap.timeline()
-
-    timeline.from(el, {
-      y: 100,
-      ease: 'power4.out',
-      delay: 1,
-      skewY: 7,
-      stagger: {
-        amount: 0.3
-      }
-    })
+    TweenLite.set(el, { x: '-101%' })
+    var lines = new TimelineMax({ repeat: 5, yoyo: true, repeatDelay: 2 })
+    lines.to(el, 1, { x: '0%' })
   }, [])
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
