@@ -7,15 +7,17 @@ const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
     const el = textRef.current
-    animate(
-      el,
-      { x: 200 },
-      {
-        delay: stagger(0.1),
-        duration: 0.5,
-        easing: [0.22, 0.03, 0.26, 1]
-      }
-    )
+    if (el) {
+      animate(
+        el,
+        { y: 50 },
+        {
+          delay: stagger(0.1),
+          duration: 0.5,
+          easing: [0.22, 0.03, 0.26, 1]
+        }
+      )
+    }
   }, [])
 
   return (
