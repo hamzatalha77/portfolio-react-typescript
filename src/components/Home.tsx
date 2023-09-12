@@ -2,7 +2,6 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import { useRef, useEffect } from 'react'
 import { animate, stagger } from 'motion'
-
 const Home = () => {
   const textRef = useRef(null)
   useEffect(() => {
