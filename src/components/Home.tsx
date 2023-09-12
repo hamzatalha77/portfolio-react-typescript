@@ -2,9 +2,11 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import { useRef, useEffect } from 'react'
 import { animate, stagger } from 'motion'
+import SplitType from 'split-type'
 
 const Home = () => {
   const textRef = useRef(null)
+
   useEffect(() => {
     const el = textRef.current
     if (el) {
