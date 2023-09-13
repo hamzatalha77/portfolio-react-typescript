@@ -1,37 +1,10 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import { motion, useInView, useAnimation } from 'framer-motion'
-import { useRef, useEffect } from 'react'
 
 const Home = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-
-  const mainControls = useAnimation()
-  const slideControls = useAnimation()
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start('visible')
-      slideControls.start('visible')
-    }
-  }, [isInView, mainControls, slideControls])
   return (
-    <div
-      ref={ref}
-      id="home"
-      className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]"
-    >
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 }
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-        className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
-      >
+    <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
+      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-[#b22725] text-2xl">Hi 👋, My Name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Hamza Talha
@@ -55,7 +28,7 @@ const Home = () => {
             </span>
           </button>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
