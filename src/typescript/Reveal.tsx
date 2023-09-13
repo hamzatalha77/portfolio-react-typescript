@@ -7,16 +7,13 @@ interface Props {
 const Reveal = ({ children, width = 'fit-content' }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-
   const mainControls = useAnimation()
-  const slideControls = useAnimation()
 
   useEffect(() => {
     if (isInView) {
       mainControls.start('visible')
-      slideControls.start('visible')
     }
-  }, [isInView, mainControls, slideControls])
+  }, [isInView, mainControls])
   return (
     <div style={{ position: 'relative', width, overflow: 'hidden' }}>
       <motion.div
