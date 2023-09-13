@@ -1,13 +1,13 @@
 import Reveal from '../utils/Reveal'
-import { useRef, useState, useEffect } from 'react'
+import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 const Contact = () => {
   const [loading, setLoading] = useState(false)
-  const [emailSent, setEmailSent] = useState(false) // Track email sent status
+  const [emailSent, setEmailSent] = useState(false)
 
   const sendEmail = (e: any) => {
     e.preventDefault()
-    setLoading(true) // Start loading
+    setLoading(true)
 
     emailjs
       .sendForm(
@@ -19,15 +19,15 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text)
-          setEmailSent(true) // Set email sent status to true
+          setEmailSent(true)
         },
         (error) => {
           console.log(error.text)
-          setEmailSent(false) // Set email sent status to false
+          setEmailSent(false)
         }
       )
       .finally(() => {
-        setLoading(false) // Stop loading
+        setLoading(false)
       })
   }
   return (
