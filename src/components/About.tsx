@@ -1,6 +1,16 @@
-import { motion } from 'framer-motion'
-
+import { motion, useInView, useAnimation } from 'framer-motion'
+import { useRef, useEffect } from 'react'
 const About = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  const mainControls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start('visible')
+    }
+  }, [isInView, mainControls])
   return (
     <div
       id="about"
@@ -12,7 +22,7 @@ const About = () => {
           visible: { opacity: 1, y: 0 }
         }}
         initial="hidden"
-        animate="visible"
+        animate={mainControls}
         transition={{ duration: 0.5, delay: 0.25 }}
         className="flex flex-col justify-center items-center w-full h-full"
       >

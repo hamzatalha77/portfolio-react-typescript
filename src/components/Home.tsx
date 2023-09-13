@@ -1,15 +1,21 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import { motion, useInView, useAnimation, useIsPresent } from 'framer-motion'
+import { motion, useInView, useAnimation } from 'framer-motion'
 import { useRef, useEffect } from 'react'
 
 const Home = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
+  const mainControls = useAnimation()
+  const slideControls = useAnimation()
+
   useEffect(() => {
-    console.log(isInView)
-  }, [isInView])
+    if (isInView) {
+      mainControls.start('visible')
+      slideControls.start('visible')
+    }
+  }, [isInView, mainControls, slideControls])
   return (
     <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
       <motion.div
@@ -18,7 +24,7 @@ const Home = () => {
           visible: { opacity: 1, y: 0 }
         }}
         initial="hidden"
-        animate="visible"
+        animate={mainControls}
         transition={{ duration: 0.5, delay: 0.25 }}
         className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
       >
