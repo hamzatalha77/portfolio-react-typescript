@@ -1,41 +1,36 @@
 import Reveal from '../utils/Reveal'
-import { useRef,useState,useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 const Contact = () => {
-  const emailRef = useRef<HTMLInputElement>();
-  const nameRef = useRef<HTMLInputElement>();
-  const [loading, setLoading] = useState(false);
+  const emailRef = useRef<HTMLInputElement>()
+  const nameRef = useRef<HTMLInputElement>()
+  const [loading, setLoading] = useState(false)
 
-  const sendEmail = () => {
-    useEffect(() => emailjs.init("BZSXfUU-iJjQFFcpH"), []);
-    // Add these
-    const handleSubmit = async (e:any) => {
-      e.preventDefault();
-      const serviceId = "service_dwdjncv";
-      const templateId = "template_aeit1dd";
-      try {
-        setLoading(true);
-        await emailjs.send(serviceId, templateId, {
-         name: nameRef.current.value,
-          recipient: emailRef.current.value
-        });
-        alert("email successfully sent check inbox");
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const sendEmail = (e: any) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_dwdjncv',
+        'template_aeit1dd',
+        e.target,
+        'BZSXfUU-iJjQFFcpH'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+  }
   return (
     <div
       id="contact"
       className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
     >
-      <form
-       
-        onSubmit={handleSubmit}
-        className="flex flex-col max-w-[600px] w-full"
-      >
+      <form onSubmit={sendEmail} className="flex flex-col max-w-[600px] w-full">
         <div className="pb-8">
           <Reveal>
             <p className="text-4xl font-bold inline border-b-4 border-[#444544] dark:border-[#b22725]">
@@ -52,7 +47,6 @@ const Contact = () => {
         </div>
 
         <input
-         ref={nameRef}
           type="text"
           className="bg-[#ccd6f6] p-2"
           placeholder="Name"
@@ -60,7 +54,6 @@ const Contact = () => {
         />
 
         <input
-        ref={emailRef} 
           type="email"
           className="bg-[#ccd6f6] p-2 my-4"
           placeholder="Email"
