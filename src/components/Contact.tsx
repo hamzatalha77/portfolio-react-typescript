@@ -12,7 +12,7 @@ const Contact = () => {
     emailjs
       .sendForm(
         'service_dwdjncv',
-        'template_aeit1dd',
+        'template_o4tbf5g',
         e.target,
         'BZSXfUU-iJjQFFcpH'
       )
@@ -50,14 +50,14 @@ const Contact = () => {
           type="text"
           className="bg-[#ccd6f6] p-2"
           placeholder="Name"
-          name="user_name"
+          name="from_name"
         />
 
         <input
           type="email"
           className="bg-[#ccd6f6] p-2 my-4"
           placeholder="Email"
-          name="user_email"
+          name="to_name"
         />
 
         <textarea
