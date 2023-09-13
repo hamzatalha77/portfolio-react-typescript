@@ -2,12 +2,12 @@ import Reveal from '../utils/Reveal'
 import { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 const Contact = () => {
-  const emailRef = useRef<HTMLInputElement>()
-  const nameRef = useRef<HTMLInputElement>()
   const [loading, setLoading] = useState(false)
+  const [emailSent, setEmailSent] = useState(false) // Track email sent status
 
   const sendEmail = (e: any) => {
     e.preventDefault()
+    setLoading(true) // Start loading
 
     emailjs
       .sendForm(
@@ -19,11 +19,16 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text)
+          setEmailSent(true) // Set email sent status to true
         },
         (error) => {
           console.log(error.text)
+          setEmailSent(false) // Set email sent status to false
         }
       )
+      .finally(() => {
+        setLoading(false) // Stop loading
+      })
   }
   return (
     <div
@@ -68,7 +73,7 @@ const Contact = () => {
 
         <Reveal>
           <button className="text-[#b22725] dark:text-[#ffffff]  dark:border-[#b22725] dark:bg-[#b22725] hover:bg-[#191a19] hover:border-[#191a19] dark:hover:bg-transparent border-[#b22725] dark:hover:border-[#b22725] border-2  px-4 py-3 my-8 mx-auto flex items-center">
-            Let's Collab
+            {loading ? 'Sending...' : "Let's Collab"}
           </button>
         </Reveal>
       </form>
