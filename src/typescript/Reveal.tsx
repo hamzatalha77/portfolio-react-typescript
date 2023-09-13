@@ -1,6 +1,6 @@
 import { motion, useInView, useAnimation } from 'framer-motion'
-import { relative } from 'path'
 import { useRef, useEffect } from 'react'
+
 interface Props {
   children: JSX.Element
 }
