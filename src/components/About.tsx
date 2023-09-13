@@ -26,7 +26,7 @@ const About = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 1.5, delay: 1 }}
         className="flex flex-col justify-center items-center w-full h-full"
       >
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
