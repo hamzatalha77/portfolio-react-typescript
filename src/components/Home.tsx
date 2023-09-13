@@ -17,7 +17,11 @@ const Home = () => {
     }
   }, [isInView, mainControls, slideControls])
   return (
-    <div id="home" className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]">
+    <div
+      ref={ref}
+      id="home"
+      className="w-full h-screen bg-[#fffdf9] dark:bg-[#191a19]"
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

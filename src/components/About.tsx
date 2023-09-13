@@ -5,14 +5,17 @@ const About = () => {
   const isInView = useInView(ref, { once: true })
 
   const mainControls = useAnimation()
+  const slideControls = useAnimation()
 
   useEffect(() => {
     if (isInView) {
       mainControls.start('visible')
+      slideControls.start('visible')
     }
-  }, [isInView, mainControls])
+  }, [isInView, mainControls, slideControls])
   return (
     <div
+      ref={ref}
       id="about"
       className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544]"
     >
