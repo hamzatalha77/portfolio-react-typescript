@@ -1,12 +1,39 @@
 import Reveal from '../utils/Reveal'
-
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 const Contact = () => {
+  const form = useRef()
+
+  const sendEmail = (e: any) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_dwdjncv',
+        'template_h6e2bmv',
+        form.current,
+        'BZSXfUU-iJjQFFcpH'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+          console.log('message has been sent')
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+  }
   return (
     <div
       id="contact"
       className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
     >
-      <form action="POST" className="flex flex-col max-w-[600px] w-full">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="flex flex-col max-w-[600px] w-full"
+      >
         <div className="pb-8">
           <Reveal>
             <p className="text-4xl font-bold inline border-b-4 border-[#444544] dark:border-[#b22725]">
@@ -26,14 +53,14 @@ const Contact = () => {
           type="text"
           className="bg-[#ccd6f6] p-2"
           placeholder="Name"
-          name="name"
+          name="user_name"
         />
 
         <input
           type="email"
           className="bg-[#ccd6f6] p-2 my-4"
           placeholder="Email"
-          name="email"
+          name="user_email"
         />
 
         <textarea
