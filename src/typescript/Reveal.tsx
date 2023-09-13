@@ -1,4 +1,5 @@
 import { motion, useInView, useAnimation } from 'framer-motion'
+import { relative } from 'path'
 import { useRef, useEffect } from 'react'
 interface Props {
   children: JSX.Element
@@ -16,7 +17,7 @@ const Reveal = ({ children }: Props) => {
     }
   }, [isInView, mainControls, slideControls])
   return (
-    <div ref={ref} style={{ width: '100%' }}>
+    <div ref={ref} style={{ position: 'relative', width: '100%' }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
