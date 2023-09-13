@@ -4,7 +4,7 @@ interface Props {
   children: JSX.Element
   width?: 'fit-content' | '100%'
 }
-const Reveal = ({ children, width = 'fit-content' }: Props) => {
+const Reveal = ({ children }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const mainControls = useAnimation()
@@ -15,7 +15,7 @@ const Reveal = ({ children, width = 'fit-content' }: Props) => {
     }
   }, [isInView, mainControls])
   return (
-    <div style={{ position: 'relative', width, overflow: 'hidden' }}>
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
