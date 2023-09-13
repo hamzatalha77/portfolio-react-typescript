@@ -1,6 +1,6 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import Reveal from '../typescript/Reveal'
+import Reveal from '../utils/Reveal'
 
 const Home = () => {
   return (

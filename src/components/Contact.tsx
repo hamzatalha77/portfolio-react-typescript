@@ -1,4 +1,4 @@
-import Reveal from '../typescript/Reveal'
+import Reveal from '../utils/Reveal'
 
 const Contact = () => {
   return (

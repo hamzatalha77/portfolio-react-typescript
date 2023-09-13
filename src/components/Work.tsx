@@ -2,7 +2,7 @@ import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { firestore } from '../config/firebase'
 import { FaGithub } from 'react-icons/fa'
-import Reveal from '../typescript/Reveal'
+import Reveal from '../utils/Reveal'
 
 const Work = () => {
   const [data, setData] = useState<any[]>([])

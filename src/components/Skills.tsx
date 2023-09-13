@@ -6,7 +6,7 @@ import Firebase from '../assets/firebase.png'
 import Typescript from '../assets/typescript.png'
 import Nextjs from '../assets/nextjs.png'
 import Redux from '../assets/redux.png'
-import Reveal from '../typescript/Reveal'
+import Reveal from '../utils/Reveal'
 
 const Skills = () => {
   return (
