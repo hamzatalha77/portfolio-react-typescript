@@ -50,26 +50,30 @@ const Contact = () => {
             </p>
           </Reveal>
         </div>
+        <Reveal>
+          <input
+            type="text"
+            className="bg-[#ccd6f6] p-2 w-full"
+            placeholder="Name"
+            name="from_name"
+          />
+        </Reveal>
+        <Reveal>
+          <input
+            type="email"
+            className="bg-[#ccd6f6] p-2 my-4 w-full"
+            placeholder="Email"
+            name="to_name"
+          />
+        </Reveal>
 
-        <input
-          type="text"
-          className="bg-[#ccd6f6] p-2"
-          placeholder="Name"
-          name="from_name"
-        />
-
-        <input
-          type="email"
-          className="bg-[#ccd6f6] p-2 my-4"
-          placeholder="Email"
-          name="to_name"
-        />
-
-        <textarea
-          name="message"
-          className="bg-[#ccd6f6] p-2"
-          rows={10}
-        ></textarea>
+        <Reveal>
+          <textarea
+            name="message"
+            className="bg-[#ccd6f6] p-2 w-full"
+            rows={10}
+          ></textarea>
+        </Reveal>
 
         <Reveal>
           <button className="text-[#b22725] dark:text-[#ffffff]  dark:border-[#b22725] dark:bg-[#b22725] hover:bg-[#191a19] hover:border-[#191a19] dark:hover:bg-transparent border-[#b22725] dark:hover:border-[#b22725] border-2  px-4 py-3 my-8 mx-auto flex items-center">
