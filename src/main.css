@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @layer base {
@@ -30,4 +29,19 @@
   background-size: cover;
   background-position: center;
   height: 250px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b22725;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9a2e2c;
 }
