@@ -6,18 +6,25 @@ import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-  const [theme, setTheme] = useState('dark')
+  const initialTheme = localStorage.getItem('theme') || 'dark'
+  const [theme, setTheme] = useState(initialTheme)
 
   useEffect(() => {
+    // Update the theme in localStorage whenever it changes
+    localStorage.setItem('theme', theme)
+
+    // Apply the theme class to the document element
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
   }, [theme])
+
   const openNav = () => {
     setNav((prev) => !prev)
   }
+
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
