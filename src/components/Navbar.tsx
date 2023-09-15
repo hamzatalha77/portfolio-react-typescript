@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
 
@@ -123,7 +123,7 @@ const Navbar = () => {
         </ul>
         <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
           <ul>
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0072b1]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="https://www.linkedin.com/in/hamza-talha/"
@@ -139,12 +139,12 @@ const Navbar = () => {
                 Github <FaGithub size={30} />
               </a>
             </li>
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#42b883]">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#00acee]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="mailto:hamzatalha.web7@gmail.com"
               >
-                Email <HiOutlineMail size={30} />
+                Twitter <FaSquareXTwitter size={30} />
               </a>
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
