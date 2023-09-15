@@ -80,7 +80,7 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 left-0 w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] flex flex-col justify-center items-center text-[#8892b0]'
+              : 'absolute top-0 left-0 w-full h-screen bg-[#fffdf9] dark:bg-[#191a19] flex flex-col justify-center items-center text-[#8892b0]'
           }
         >
           <li className="py-6 text-4xl">
@@ -146,7 +146,7 @@ const Navbar = () => {
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#00acee]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
-                href="mailto:hamzatalha.web7@gmail.com"
+                href="https://twitter.com/HamzaTalha_Web7"
               >
                 Twitter <FaSquareXTwitter size={30} />
               </a>
