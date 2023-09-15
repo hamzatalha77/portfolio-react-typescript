@@ -154,7 +154,7 @@ const Navbar = () => {
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
-                href="https://hamzaios74s.files.wordpress.com/2023/09/hamza-talha-cv-2023.pdf"
+                href="https://firebasestorage.googleapis.com/v0/b/something-5e33c.appspot.com/o/Hamza%20Talha%20CV%202023.pdf?alt=media&token=81c9742c-c210-4832-a717-fb87c782ba11"
               >
                 Resume <BsFillPersonLinesFill size={30} />
               </a>
