@@ -17,7 +17,7 @@ const Reveal = ({ children }: Props) => {
     }
   }, [isInView, mainControls, slideControls])
   return (
-    <div ref={ref} style={{ position: 'relative', width: '100%' }}>
+    <div ref={ref} style={{ position: 'relative', width: '100%', zIndex: 1 }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
