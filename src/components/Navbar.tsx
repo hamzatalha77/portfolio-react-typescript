@@ -1,30 +1,34 @@
 import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-  const [theme, setTheme] = useState('dark')
+  const initialTheme = localStorage.getItem('theme') || 'dark'
+  const [theme, setTheme] = useState(initialTheme)
 
   useEffect(() => {
+    localStorage.setItem('theme', theme)
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
   }, [theme])
+
   const openNav = () => {
     setNav((prev) => !prev)
   }
+
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
     <>
-      <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#fffdf9] dark:bg-[#191a19] text-[#444544]">
+      <div className="fixed w-full h-[80px] flex justify-between  z-10 items-center px-4 bg-[#fffdf9] dark:bg-[#191a19] text-[#444544]">
         <div className="h-screen flex items-center justify-center">
           <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
             <input
@@ -76,7 +80,7 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 left-0 w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] flex flex-col justify-center items-center text-[#8892b0]'
+              : 'absolute top-0 left-0 w-full h-screen bg-[#fffdf9] dark:bg-[#191a19] flex flex-col justify-center items-center text-[#8892b0]'
           }
         >
           <li className="py-6 text-4xl">
@@ -123,7 +127,7 @@ const Navbar = () => {
         </ul>
         <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
           <ul>
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0072b1]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="https://www.linkedin.com/in/hamza-talha/"
@@ -139,18 +143,18 @@ const Navbar = () => {
                 Github <FaGithub size={30} />
               </a>
             </li>
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#42b883]">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#00acee]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
-                href="/"
+                href="https://twitter.com/HamzaTalha_Web7"
               >
-                Email <HiOutlineMail size={30} />
+                Twitter <FaSquareXTwitter size={30} />
               </a>
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
-                href="https://hamzaios74s.files.wordpress.com/2023/09/hamza-talha-cv-2023.pdf"
+                href="https://firebasestorage.googleapis.com/v0/b/something-5e33c.appspot.com/o/Hamza%20Talha%20CV%202023.pdf?alt=media&token=81c9742c-c210-4832-a717-fb87c782ba11"
               >
                 Resume <BsFillPersonLinesFill size={30} />
               </a>

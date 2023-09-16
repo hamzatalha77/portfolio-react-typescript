@@ -3,6 +3,7 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 const Contact = () => {
   const [loading, setLoading] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [emailSent, setEmailSent] = useState(false)
 
   const sendEmail = (e: any) => {
