@@ -19,7 +19,7 @@ const About = () => {
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm:text-right text-4xl font-bold text-[#8892b0] dark:text-[#ccd6f6]">
             <Reveal>
-              <p>Hi. i'm Hamza, nice to see you here please take a sit. </p>
+              <p>Hi. i'm Hamza, nice to see you here please take a seat. </p>
             </Reveal>
           </div>
           <div>
@@ -28,8 +28,9 @@ const About = () => {
                 id="scrollingText"
                 className="text-[#000000] dark:text-[#f2f2f2]"
               >
-                “Hard times create strong men. Strong men create good times.
-                Good times create weak men. And, weak men create hard times.”
+                “I'm Hamza Talha, a software engineer eager to craft innovative
+                apps with new technologies. Join me on this exciting journey
+                into the world of software engineering and innovation.”
               </p>
             </Reveal>
           </div>
