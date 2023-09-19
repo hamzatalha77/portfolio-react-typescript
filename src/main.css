@@ -59,7 +59,8 @@ body {
 }
 .home2 {
 }
-@media screen and (min-width: 768px) {
-  .home {
-  }
+@media screen and (min-height: 768px) {
+  /* .home2 {
+    padding-top: 60px;
+  } */
 }
