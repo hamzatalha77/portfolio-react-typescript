@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { FaSquareXTwitter } from 'react-icons/fa6'
+import {
+  FaBars,
+  FaTimes,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter
+} from 'react-icons/fa'
+
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
 //
@@ -148,13 +154,13 @@ const Navbar = () => {
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="https://twitter.com/HamzaTalha_Web7"
               >
-                Twitter <FaSquareXTwitter size={30} />
+                Twitter <FaTwitter size={30} />
               </a>
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
-                href="https://firebasestorage.googleapis.com/v0/b/something-5e33c.appspot.com/o/Hamza%20Talha%20CV%202023.pdf?alt=media&token=81c9742c-c210-4832-a717-fb87c782ba11"
+                href="https://firebasestorage.googleapis.com/v0/b/something-5e33c.appspot.com/o/Hamza%20Talha%20CV%202023.pdf?alt=media&token=ec9cf985-3c6a-42b0-80c0-f25015694ea0"
               >
                 Resume <BsFillPersonLinesFill size={30} />
               </a>

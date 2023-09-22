@@ -5,7 +5,19 @@ const Contact = () => {
   const [loading, setLoading] = useState(false)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [emailSent, setEmailSent] = useState(false)
+  const [formData, setFormData] = useState({
+    from_name: '',
+    to_name: '',
+    message: ''
+  })
 
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+  }
   const sendEmail = (e: any) => {
     e.preventDefault()
     setLoading(true)
@@ -21,6 +33,11 @@ const Contact = () => {
         (result) => {
           console.log(result.text)
           setEmailSent(true)
+          setFormData({
+            from_name: '',
+            to_name: '',
+            message: ''
+          })
         },
         (error) => {
           console.log(error.text)
@@ -57,6 +74,8 @@ const Contact = () => {
             className="bg-[#ccd6f6] p-2 w-full"
             placeholder="Name"
             name="from_name"
+            value={formData.from_name}
+            onChange={handleInputChange}
           />
         </Reveal>
         <Reveal>
@@ -65,6 +84,8 @@ const Contact = () => {
             className="bg-[#ccd6f6] p-2 my-4 w-full"
             placeholder="Email"
             name="to_name"
+            value={formData.to_name}
+            onChange={handleInputChange}
           />
         </Reveal>
 
@@ -73,6 +94,8 @@ const Contact = () => {
             name="message"
             className="bg-[#ccd6f6] p-2 w-full"
             rows={10}
+            value={formData.message}
+            onChange={handleInputChange}
           ></textarea>
         </Reveal>
 
