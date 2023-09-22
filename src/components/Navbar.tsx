@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { FaSquareXTwitter } from 'react-icons/fa6'
+import { FaTwitterSquare } from 'react-icons/fa'
+
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
 
@@ -148,7 +149,7 @@ const Navbar = () => {
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
                 href="https://twitter.com/HamzaTalha_Web7"
               >
-                Twitter <FaSquareXTwitter size={30} />
+                Twitter <FaTwitterSquare size={30} />
               </a>
             </li>
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
