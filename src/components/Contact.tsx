@@ -23,7 +23,11 @@ const Contact = () => {
   const sendEmail = (e: any) => {
     e.preventDefault()
     setLoading(true)
-
+    if (!formData.from_name || !formData.to_name || !formData.message) {
+      toast.error('Please fill in all fields')
+      setLoading(false)
+      return
+    }
     emailjs
       .sendForm(
         'service_dwdjncv',
