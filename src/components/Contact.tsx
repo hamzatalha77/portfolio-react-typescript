@@ -44,12 +44,18 @@ const Contact = () => {
             to_name: '',
             message: ''
           })
-          toast.success('Email sent successfully')
+          toast.success('Email sent successfully', {
+            position: toast.POSITION.BOTTOM_LEFT,
+            className: 'toast-message'
+          })
         },
         (error) => {
           console.log(error.text)
           setEmailSent(false)
-          toast.error('Email sending failed')
+          toast.error('Email sending failed', {
+            position: toast.POSITION.BOTTOM_LEFT,
+            className: 'toast-message'
+          })
         }
       )
       .finally(() => {
