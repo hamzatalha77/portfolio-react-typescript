@@ -55,19 +55,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #9a2e2c;
 }
-.home {
-}
-.home2 {
-}
+
 @media screen and (min-height: 768px) {
   /* .home2 {
     padding-top: 60px;
   } */
-}
-.toast-message {
-  background: darkblue;
-  color: #fff;
-  font-size: 20px;
-  width: 34vw;
-  padding: 30px 20px;
 }
