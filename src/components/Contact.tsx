@@ -1,6 +1,8 @@
 import Reveal from '../utils/Reveal'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const Contact = () => {
   const [loading, setLoading] = useState(false)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -38,10 +40,12 @@ const Contact = () => {
             to_name: '',
             message: ''
           })
+          toast.success('Email sent successfully')
         },
         (error) => {
           console.log(error.text)
           setEmailSent(false)
+          toast.error('Email sending failed')
         }
       )
       .finally(() => {
@@ -53,6 +57,7 @@ const Contact = () => {
       id="contact"
       className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
     >
+      <ToastContainer />
       <form onSubmit={sendEmail} className="flex flex-col max-w-[600px] w-full">
         <div className="pb-8">
           <Reveal>
