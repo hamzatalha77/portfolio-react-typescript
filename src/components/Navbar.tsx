@@ -23,7 +23,20 @@ const Navbar = () => {
   }
 
   const handleThemeSwitch = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    // Toggle the theme immediately
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'))
+
+    // Add a delay before applying the new theme
+    setTimeout(() => {
+      const newTheme = theme === 'dark' ? 'light' : 'dark'
+      localStorage.setItem('theme', newTheme)
+
+      if (newTheme === 'dark') {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    }, 500) // Adjust the delay time (in milliseconds) as needed
   }
 
   return (
