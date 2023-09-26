@@ -32,7 +32,7 @@ const Navbar = () => {
       } else {
         document.documentElement.classList.remove('dark')
       }
-    }, 500)
+    }, 2000)
   }
 
   return (
