@@ -23,7 +23,16 @@ const Navbar = () => {
   }
 
   const handleThemeSwitch = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'))
+    setTimeout(() => {
+      const newTheme = theme === 'dark' ? 'light' : 'dark'
+      localStorage.setItem('theme', newTheme)
+      if (newTheme === 'dark') {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    }, 2000)
   }
 
   return (
