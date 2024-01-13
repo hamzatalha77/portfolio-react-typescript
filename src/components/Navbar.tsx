@@ -163,7 +163,7 @@ const Navbar = () => {
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff7e67]">
               <a
                 className="flex justify-between items-center w-full text-[#f1f1f1]"
-                href="https://firebasestorage.googleapis.com/v0/b/something-5e33c.appspot.com/o/Hamza%20talha%20CV%202023%20Dev.pdf?alt=media&token=9e70470c-09fb-4bfc-9c36-1ce50dcc86d7&_gl=1*1skucm5*_ga*MjEwMTI0Mjk2Mi4xNjkzODIzNTc4*_ga_CW55HF8NVT*MTY5NjE2MTIyMC41LjEuMTY5NjE2MTI2My4xNy4wLjA."
+                href="https://firebasestorage.googleapis.com/v0/b/something-5e33c.appspot.com/o/Hamza%20Talha%20CV%202024.pdf?alt=media&token=13ffe58c-e3d1-486e-9ed0-9ebc62f389d3"
               >
                 Resume <BsFillPersonLinesFill size={30} />
               </a>
