@@ -36,7 +36,7 @@ const Navbar = () => {
   }
 
   return (
-    <>
+    <react.Fragment>
       <div className="fixed w-full h-[80px] flex justify-between  z-10 items-center px-4 bg-[#fffdf9] dark:bg-[#191a19] text-[#444544]">
         <div className="h-screen flex items-center justify-center">
           <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
@@ -171,7 +171,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </>
+    </react.Fragment>
   )
 }
 
