@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import react, { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-//
+
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const initialTheme = localStorage.getItem('theme') || 'dark'
