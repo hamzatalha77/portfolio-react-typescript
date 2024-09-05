@@ -24,63 +24,111 @@ const Skills = () => {
 
           <Reveal>
             <p className="py-4 text-[#000000] dark:text-[#f2f2f2]">
-              / These are the technologies I've worked with
+              / These are the technologies I've worked with 👨‍💻
             </p>
           </Reveal>
         </div>
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 text-[#8892b0]">
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Reactjs} alt="reactjs" className="w-20 mx-auto" />
+              <img
+                src={Reactjs}
+                alt="reactjs"
+                className="w-20 mx-auto"
+                width={250}
+                height={250}
+              />
               <p className="my-4">REACT JS</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Redux} alt="redux" className="w-20 mx-auto" />
+              <img
+                src={Redux}
+                alt="redux"
+                className="w-20 mx-auto"
+                width={537}
+                height={512}
+              />
               <p className="my-4">REDUX</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Typescript} alt="typescript" className="w-20 mx-auto" />
+              <img
+                src={Typescript}
+                alt="typescript"
+                className="w-20 mx-auto"
+                width={512}
+                height={512}
+              />
               <p className="my-4">TYPESCRIPT</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Nextjs} alt="nextjs" className="w-24 mx-auto" />
+              <img
+                src={Nextjs}
+                alt="nextjs"
+                className="w-24 mx-auto"
+                width={512}
+                height={400}
+              />
               <p className="my-4">Next JS</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Mongodb} alt="mongodb" className="w-20 mx-auto" />
+              <img
+                src={Mongodb}
+                alt="mongodb"
+                className="w-20 mx-auto"
+                width={250}
+                height={250}
+              />
               <p className="my-4">MongoDB</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Nodejs} alt="nodejs" className="w-20 mx-auto" />
+              <img
+                src={Nodejs}
+                alt="nodejs"
+                className="w-20 mx-auto"
+                width={250}
+                height={250}
+              />
               <p className="my-4">NODE JS</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Tailwind} alt="tailwind" className="w-20 mx-auto" />
+              <img
+                src={Tailwind}
+                alt="tailwind"
+                className="w-20 mx-auto"
+                width={250}
+                height={250}
+              />
               <p className="my-4">TAILWIND CSS</p>
             </div>
           </Reveal>
 
           <Reveal>
             <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-              <img src={Firebase} alt="firebase" className="w-20 mx-auto" />
+              <img
+                src={Firebase}
+                alt="firebase"
+                className="w-20 mx-auto"
+                width={250}
+                height={250}
+              />
               <p className="my-4">FIREBASE</p>
             </div>
           </Reveal>

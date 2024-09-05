@@ -76,7 +76,7 @@ const Contact = () => {
 
           <Reveal>
             <p className="text-[#000000] dark:text-[#f2f2f2] py-4">
-              / Submit the form below or shoot me an email -
+              / Submit the form below or shoot me an email - 📧
               hamzatalha.web7@gmail.com
             </p>
           </Reveal>

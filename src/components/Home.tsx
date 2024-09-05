@@ -10,18 +10,20 @@ const Home = () => {
     >
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full home2">
         <Reveal>
-          <p className="text-[#b22725] text-2xl">Hi 👋, My Name is</p>
+          <p className="text-[#b22725] text-2xl">
+            Hi <span className="wave">👋</span> , My Name is
+          </p>
         </Reveal>
         <Reveal>
-          <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
+          <h2 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
             Hamza Talha
-          </h1>
+          </h2>
         </Reveal>
 
         <Reveal>
-          <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
+          <h3 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
             i'm a Software Engineer.
-          </h2>
+          </h3>
         </Reveal>
 
         <Reveal>
