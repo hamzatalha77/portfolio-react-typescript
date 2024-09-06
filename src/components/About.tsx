@@ -30,9 +30,10 @@ const About = () => {
                 id="scrollingText"
                 className="text-[#000000] dark:text-[#f2f2f2]"
               >
-                “I'm Hamza Talha, a software engineer eager to craft innovative
-                apps with new technologies. Join me on this exciting journey
-                into the world of software engineering and innovation.”
+                “I'm Hamza Talha, a software engineer passionate about crafting
+                innovative apps with cutting-edge technologies. Join me on this
+                exciting journey into the world of software engineering and
+                innovation.”
               </p>
             </Reveal>
           </div>

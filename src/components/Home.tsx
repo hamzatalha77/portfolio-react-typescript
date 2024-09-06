@@ -28,10 +28,11 @@ const Home = () => {
 
         <Reveal>
           <p className="text-[#000000] dark:text-[#f2f2f2] py-4 max-w-[700px]">
-            hello everybody i'm trying to build my first portfolio using
-            (React/Typescript) i'll do my best in this project because i really
-            need to improve myself within learning and creating websites. i'll
-            deploy it as soon as possible on github stay stunned!
+            "Hello everyone! I'm working on building my first portfolio using
+            (React and TypeScript). I'll put my best effort into this project
+            because I really want to improve my skills in both learning and
+            creating websites. I'll deploy it on GitHub as soon as possible, so
+            stay tuned!"
           </p>
         </Reveal>
 
