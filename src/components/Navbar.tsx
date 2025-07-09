@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <react.Fragment>
-      <div className="fixed w-full h-[80px] flex justify-between  z-10 items-center px-4 bg-[#fffdf9] dark:bg-[#191a19] text-[#444544]">
+      <div className="fixed w-full h-[80px] flex justify-between  z-10 items-center px-4   dark:bg-[#191a19] text-[#444544]">
         <div className="h-screen flex items-center justify-center">
           <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
             <input
@@ -89,7 +89,7 @@ const Navbar = () => {
           className={
             !nav
               ? 'hidden'
-              : 'absolute top-0 left-0 w-full h-screen bg-[#fffdf9] dark:bg-[#191a19] flex flex-col justify-center items-center text-[#8892b0]'
+              : 'absolute top-0 left-0 w-full h-screen   dark:bg-[#191a19] flex flex-col justify-center items-center text-[#8892b0]'
           }
         >
           <li className="py-6 text-4xl">

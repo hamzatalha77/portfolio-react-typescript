@@ -12,7 +12,7 @@ const Skills = () => {
   return (
     <div
       id="skill"
-      className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544]"
+      className="w-full h-screen    dark:bg-[#191a19] text-[#b22725] dark:text-[#444544]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
@@ -34,9 +34,9 @@ const Skills = () => {
               <img
                 src={Reactjs}
                 alt="reactjs"
-                className="w-20 mx-auto"
-                width={250}
-                height={250}
+                className="w-20 mx-auto h-20"
+                width={512}
+                height={512}
               />
               <p className="my-4">REACT JS</p>
             </div>
@@ -47,8 +47,8 @@ const Skills = () => {
               <img
                 src={Redux}
                 alt="redux"
-                className="w-20 mx-auto"
-                width={537}
+                className="w-20 mx-auto h-20"
+                width={512}
                 height={512}
               />
               <p className="my-4">REDUX</p>
@@ -60,7 +60,7 @@ const Skills = () => {
               <img
                 src={Typescript}
                 alt="typescript"
-                className="w-20 mx-auto"
+                className="w-20 mx-auto h-20"
                 width={512}
                 height={512}
               />
@@ -73,9 +73,9 @@ const Skills = () => {
               <img
                 src={Nextjs}
                 alt="nextjs"
-                className="w-24 mx-auto"
+                className="w-24 mx-auto h-20"
                 width={512}
-                height={400}
+                height={512}
               />
               <p className="my-4">Next JS</p>
             </div>
@@ -86,9 +86,9 @@ const Skills = () => {
               <img
                 src={Mongodb}
                 alt="mongodb"
-                className="w-20 mx-auto"
-                width={250}
-                height={250}
+                className="w-20 mx-auto h-20"
+                width={512}
+                height={512}
               />
               <p className="my-4">MongoDB</p>
             </div>
@@ -99,9 +99,9 @@ const Skills = () => {
               <img
                 src={Nodejs}
                 alt="nodejs"
-                className="w-20 mx-auto"
-                width={250}
-                height={250}
+                className="w-20 mx-auto h-20"
+                width={512}
+                height={512}
               />
               <p className="my-4">NODE JS</p>
             </div>
@@ -112,9 +112,9 @@ const Skills = () => {
               <img
                 src={Tailwind}
                 alt="tailwind"
-                className="w-20 mx-auto"
-                width={250}
-                height={250}
+                className="w-20 mx-auto h-20"
+                width={512}
+                height={512}
               />
               <p className="my-4">TAILWIND CSS</p>
             </div>
@@ -125,9 +125,9 @@ const Skills = () => {
               <img
                 src={Firebase}
                 alt="firebase"
-                className="w-20 mx-auto"
-                width={250}
-                height={250}
+                className="w-20 mx-auto h-20"
+                width={512}
+                height={512}
               />
               <p className="my-4">FIREBASE</p>
             </div>

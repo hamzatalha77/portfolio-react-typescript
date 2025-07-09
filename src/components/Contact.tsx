@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-screen bg-[#fffdf9]  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
+      className="w-full h-screen    dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
     >
       <ToastContainer />
       <form onSubmit={sendEmail} className="flex flex-col max-w-[600px] w-full">
@@ -85,7 +85,7 @@ const Contact = () => {
           <input
             type="text"
             className="bg-[#ccd6f6] p-2 w-full"
-            placeholder="Name"
+            placeholder="Type Your Full Name"
             name="from_name"
             value={formData.from_name}
             onChange={handleInputChange}
@@ -95,7 +95,7 @@ const Contact = () => {
           <input
             type="email"
             className="bg-[#ccd6f6] p-2 my-4 w-full"
-            placeholder="Email"
+            placeholder="Type Your Email"
             name="to_name"
             value={formData.to_name}
             onChange={handleInputChange}
@@ -108,6 +108,7 @@ const Contact = () => {
             className="bg-[#ccd6f6] p-2 w-full"
             rows={10}
             value={formData.message}
+            placeholder="Type Your Message Here..."
             onChange={handleInputChange}
           ></textarea>
         </Reveal>
