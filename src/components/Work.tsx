@@ -2,6 +2,7 @@ import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { firestore } from '../config/firebase'
 import { FaGithub } from 'react-icons/fa'
+import { TfiWorld } from 'react-icons/tfi'
 import Reveal from '../utils/Reveal'
 
 const Work = () => {
@@ -54,13 +55,21 @@ const Work = () => {
                   <span className="text-2xl font bold text-[#b22725] tracking-wider ">
                     {item.name}
                   </span>
-                  <div className="pt-8 text-center ">
+                  <div className="pt-8 text-center  flex">
                     <a href={item.github} target="blank">
                       <button
                         className="text-center rounded-lg px-4 py-3 m-2
                        bg-white text-[#b22725] font-bold text-lg"
                       >
                         <FaGithub size={30} />
+                      </button>
+                    </a>
+                    <a href={item.live} target="blank">
+                      <button
+                        className="text-center rounded-lg px-4 py-3 m-2
+                       bg-white text-[#b22725] font-bold text-lg"
+                      >
+                        <TfiWorld size={30} />
                       </button>
                     </a>
                   </div>
