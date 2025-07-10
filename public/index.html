@@ -5,8 +5,6 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-
-    <!-- SEO Meta Tags -->
     <link rel="canonical" href="https://hamza-talha.netlify.app/" />
     <meta
       name="description"
@@ -16,8 +14,6 @@
       name="keywords"
       content="Hamza Talha, web developer, React, TypeScript, Node.js, SEO, full-stack development"
     />
-
-    <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="Hamza Talha - Full-Stack Developer" />
     <meta
       property="og:description"
@@ -26,8 +22,6 @@
     <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
     <meta property="og:url" content="https://yourwebsite.com" />
     <meta property="og:type" content="website" />
-
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hamza Talha - Full-Stack Developer" />
     <meta
@@ -35,31 +29,34 @@
       content="Offering professional web development services, specializing in React, TypeScript, and Node.js."
     />
     <meta name="twitter:image" content="%PUBLIC_URL%/logo192.png" />
-
-    <!-- Structured Data for SEO (Schema.org) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Hamza Talha",
         "jobTitle": "Full-Stack Developer",
-        "url": "https://yourwebsite.com",
+        "url": "https://hamza-talha.netlify.app/",
         "sameAs": [
-          "https://www.linkedin.com/in/yourprofile/",
-          "https://github.com/yourprofile"
+          "https://www.linkedin.com/in/hamza-talha/",
+          "https://github.com/hamzatalha77"
         ]
       }
     </script>
-
-    <!-- Manifest and Icons -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <!-- Title -->
+    <script>
+      ;(function () {
+        const theme = localStorage.getItem('theme') || 'dark'
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      })()
+    </script>
     <title>Hamza Talha - Full-Stack Developer & Web Services</title>
   </head>
-
-  <body className="dark">
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

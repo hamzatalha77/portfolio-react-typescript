@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-screen    dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
+      className="w-full h-screen dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] flex justify-center items-center p-4"
     >
       <ToastContainer />
       <form onSubmit={sendEmail} className="flex flex-col max-w-[600px] w-full">
