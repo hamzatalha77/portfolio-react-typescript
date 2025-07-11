@@ -39,19 +39,21 @@ const TimelineEntry = ({
         transition={{ duration: 0.5, delay: 0.25 }}
         className="w-full md:w-5/12"
       >
-        <div className="bg-[#444544] p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-102">
-          <div className="flex items-center mb-4">
-            <div className="bg-[#b22725] p-3 rounded-full mr-4">
-              <Icon className="text-white text-xl" />
+        <Reveal>
+          <div className="bg-[#444544] p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-102">
+            <div className="flex items-center mb-4">
+              <div className="bg-[#b22725] p-3 rounded-full mr-4">
+                <Icon className="text-white text-xl" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-100">{title}</h3>
+                <p className="text-[#b22725]">{subtitle}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-100">{title}</h3>
-              <p className="text-[#b22725]">{subtitle}</p>
-            </div>
+            <p className="text-gray-400 mb-2">{date}</p>
+            <p className="text-gray-300">{description}</p>
           </div>
-          <p className="text-gray-400 mb-2">{date}</p>
-          <p className="text-gray-300">{description}</p>
-        </div>
+        </Reveal>
       </motion.div>
     </div>
   )
@@ -83,9 +85,9 @@ const Timeline = () => {
     },
     {
       date: '2017 – 2020',
-      title: 'Bachalor',
-      subtitle: 'OFPPT',
-      description: 'Specialized Technician Diploma in Computer Programming',
+      title: 'Bachalor Degree',
+      subtitle: 'Lamsalla',
+      description: "Bachelor's degree in life and earth sciences",
       icon: FaCertificate
     }
   ]

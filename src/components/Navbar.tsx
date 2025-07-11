@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Desktop nav links */}
         <ul className="hidden md:flex text-[#8892b0] dark:text-[#ccd6f6] space-x-6">
-          {['home', 'about', 'skill', 'TimeLine', 'work', 'contact'].map(
+          {['home', 'about', 'skill', 'Education', 'work', 'contact'].map(
             (item) => (
               <li
                 key={item}
@@ -102,16 +102,23 @@ const Navbar = () => {
               ></label>
             </div>
           </li>
-          {['home', 'about', 'skill', 'work', 'contact'].map((item) => (
-            <li
-              key={item}
-              className="py-6 text-4xl hover:text-[#b22725] capitalize cursor-pointer"
-            >
-              <Link to={item} smooth={true} duration={500} onClick={toggleNav}>
-                {item}
-              </Link>
-            </li>
-          ))}
+          {['home', 'about', 'skill', 'Education', 'work', 'contact'].map(
+            (item) => (
+              <li
+                key={item}
+                className="py-6 text-4xl hover:text-[#b22725] capitalize cursor-pointer"
+              >
+                <Link
+                  to={item}
+                  smooth={true}
+                  duration={500}
+                  onClick={toggleNav}
+                >
+                  {item}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
 
         {/* Social Icons */}
