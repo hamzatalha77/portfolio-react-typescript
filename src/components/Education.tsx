@@ -5,7 +5,7 @@ import { GiDiploma } from 'react-icons/gi'
 import { PiCertificateDuotone } from 'react-icons/pi'
 import Reveal from '../utils/Reveal'
 
-const TimelineEntry = ({
+const EducationEntry = ({
   date,
   title,
   subtitle,
@@ -26,7 +26,7 @@ const TimelineEntry = ({
   return (
     <div
       ref={ref}
-      id="TimeLine"
+      id="Education"
       className={`flex w-full ${isLeft ? 'justify-start' : 'justify-end'} my-8`}
     >
       <motion.div
@@ -59,8 +59,8 @@ const TimelineEntry = ({
   )
 }
 
-const Timeline = () => {
-  const timelineData = [
+const Education = () => {
+  const EducationData = [
     {
       date: '2021 - 2023',
       title: 'Master',
@@ -111,13 +111,13 @@ const Timeline = () => {
 
   return (
     <div
-      id="TimeLine"
+      id="Education"
       className="w-full min-h-screen dark:bg-[#191a19] text-[#b22725] dark:text-[#444544] py-16 px-4"
     >
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="text-4xl font-bold inline border-b-4 border-[#444544] dark:border-[#b22725]">
-            Educational Timeline
+            Educational Education
           </p>
         </Reveal>
 
@@ -126,8 +126,8 @@ const Timeline = () => {
             ref={lineRef}
             className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700 transition-all duration-300"
           />
-          {timelineData.map((item, index) => (
-            <TimelineEntry
+          {EducationData.map((item, index) => (
+            <EducationEntry
               key={index}
               date={item.date}
               title={item.title}
@@ -143,4 +143,4 @@ const Timeline = () => {
   )
 }
 
-export default Timeline
+export default Education
