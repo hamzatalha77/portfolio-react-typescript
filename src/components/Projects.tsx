@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa'
 import { TfiWorld } from 'react-icons/tfi'
 import Reveal from '../utils/Reveal'
 
-const Project = () => {
+const Projects = () => {
   const [data, setData] = useState<any[]>([])
 
   useEffect(() => {
@@ -26,20 +26,20 @@ const Project = () => {
   }, [])
   return (
     <div
-      id="Project"
+      id="Projects"
       className="w-full md:h-screen  dark:bg-[#191a19] text-[#b22725] dark:text-[#444544]  "
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <Reveal>
             <p className="text-4xl font-bold inline border-b-4 border-[#444544] dark:border-[#b22725]">
-              Project
+              Projects
             </p>
           </Reveal>
 
           <Reveal>
             <p className="py-6 text-[#000000] dark:text-[#f2f2f2]">
-              ✍ /Check out some of my recent Project
+              ✍ /Check out some of my recent Projects
             </p>
           </Reveal>
         </div>
@@ -83,4 +83,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Projects

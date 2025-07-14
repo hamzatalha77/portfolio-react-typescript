@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 import Education from './components/Education'
-import Work from './components/Work'
+import Projects from './components/Projects'
 import './main.css'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <About />
       <Skills />
       <Education />
-      <Work />
+      <Projects />
       <Contact />
     </div>
   )
