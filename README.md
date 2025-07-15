@@ -1,3 +1,3 @@
 # my portfolio
 
-## Hamza
+## Hamza Talha
